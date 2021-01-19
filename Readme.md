@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Елена Ершова](https://up.htmlacademy.ru/htmlcss/30/user/1593775).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Шомин] (https://htmlacademy.ru/profile/sirnet)
 
 ---
 
