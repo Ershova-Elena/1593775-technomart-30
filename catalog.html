@@ -35,7 +35,7 @@
           <div class="heading">
             <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
           </div>
-          <div>
+          <div class="header-phone-address">
             <a class="header-phone-link" href="tel:+7812550555">+7 (812) 555-05-55</a>
             <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
@@ -59,7 +59,7 @@
        </div>
     </header>
 
-      <main class="container">
+      <main class="container page-catalog">
           <ul class="breadcrumbs">
               <li><a href="catalog.html">Каталог</a></li>
               <li><a href="blank.html">Инструмент</a></li>
@@ -119,17 +119,17 @@
             
                <div class="background-filter">
                     <h2>Сортировка:</h2>
-                    <ul>
-                        <li class="sort-option sort-radio">
-                          <input class="sort-input-radio sort-input" type="radio" name="sort" value="by-price" id="filter-by-price" checked>
+                    <ul class="sotr-input-radio"> 
+                        <li>
+                          <input class="sort-input" type="radio" name="sort" value="by-price" id="filter-by-price" checked>
                           <label for="filter-by-price">По цене</label>
                         </li>
-                        <li class="sort-option sort-radio">
-                            <input class="sort-input-radio sort-input"  type="radio" name="sort" value="by-type" id="filter-by-type"> 
+                        <li>
+                            <input class="sort-input"  type="radio" name="sort" value="by-type" id="filter-by-type"> 
                             <label for="filter-by-type">По типу</label>
                         </li>
-                        <li class="sort-option sort-radio">
-                            <input class="sort-input-radio sort-input"  type="radio" name="sort" value="by-functionality" id="filter-by-functionality">
+                        <li>
+                            <input class="sort-input"  type="radio" name="sort" value="by-functionality" id="filter-by-functionality">
                             <label for="filter-by-functionality">По функционалу</label>
                         </li>
                     </ul>
@@ -138,7 +138,7 @@
             </form>
         </section>
 
-        <section>
+        <section class="catalog">
             <h2>Список перфораторов</h2>
             <ul class="list-cards-product">
                 <li class="card-product">
@@ -221,18 +221,19 @@
             </ul>
 
         </section>
-        <section>
-            <div class="block-description">
-                <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-                <p>
-                    Перфоратор — универсальный строительный инструмент.
-                    Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-                    Существуют электромеханические и пневматические перфораторы.
-                    Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
-                    В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-                    </p>
-            </div>
-        </section>
+        <div class="block-description">
+          <section>
+            <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+              <p>
+                Перфоратор — универсальный строительный инструмент.
+                Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+                Существуют электромеханические и пневматические перфораторы.
+                Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
+                В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+              </p>   
+          </section>
+        </div>
+    
         <section class="modal modal-basket">
             <h2>Окно о добавлении товара в корзину</h2>
             <p class="modal-basket-text">Товар добавлен в корзину!</p>
@@ -242,6 +243,7 @@
               </div>
             <button class="modal-close" type="button">Закрыть</button>
         </section>
+     
 
 
       </main>
@@ -252,7 +254,7 @@
           <div class="container">
             <section class="footer-navigatoin">
               <h2>Нижняя навигация</h2>
-              <a class="footer-logo" href="index.html"><img src="img/logo/logo-footer.png" width="220" height="68" alt="Логотип Техномарт"></a>
+              <a class="footer-logo"><img src="img/logo/logo-footer.png" width="220" height="68" alt="Логотип Техномарт"></a>
               <ul class="site-navigation">
                 <li class="nav-item"><a href="blank.html">Компания</a></li>
                 <li class="nav-item"><a href="blank.html">Новости</a></li>
@@ -276,32 +278,34 @@
           </div>
         </div>
         <div class="footer-two-wrapper">
-         <section class="feedback">
-            <h2>Обратная связь</h2>
-            <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
-            Все права защищены</p>
-            <ul class="list-social">
-              <li>
-                <a class="social-button vk" href="#"><Вконтакте</a>
-              </li>
-              <li>
-                <a class="social-button fb" href="#">Фейсбук</a>
-              </li>
-              <li>
-                <a class="social-button insta" href="#">Инстаграм</a>
-              </li>
-            </ul>
+          <div class="container">
+            <section class="feedback">
+                <h2>Обратная связь</h2>
+                <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
+                Все права защищены</p>
+                <ul class="list-social">
+                  <li>
+                    <a class="social-button vk" href="#"><Вконтакте</a>
+                  </li>
+                  <li>
+                    <a class="social-button fb" href="#">Фейсбук</a>
+                  </li>
+                  <li>
+                    <a class="social-button insta" href="#">Инстаграм</a>
+                  </li>
+                </ul>
   
-            <p>
-              Обратная связь:<br>
-              <a class="footer-button" href="mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru</a>
-            </p>
+                <p class="footer-email">
+                  Обратная связь:<br>
+                  <a class="footer-button" href="mailto:mail@htmlacademy.ru"> mail@htmlacademy.ru</a>
+                </p>
   
-            <p>
-              Разработано - <br>
-              <a class="footer-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-            </p>
-         </section>
+                <p class="developed">
+                  Разработано - <br>
+                  <a class="footer-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+                </p>
+            </section>
+          </div>
         </div>
       </footer>
   
