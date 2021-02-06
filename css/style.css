@@ -160,6 +160,9 @@ img {
     color: var(--basic-black);
     text-align: center;
 }
+.profile{
+    width: 299px;
+}
 .profile:focus{
     color: var(--basic-greylight);
 }
@@ -186,7 +189,7 @@ img {
 }
 .header-info{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 300px;
 }
 .heading{
     grid-column: 1/2;
@@ -201,6 +204,7 @@ img {
 .login-interface{
     grid-column: -2/-1;
     justify-self: end;
+    max-width: 300px;
 }
 
 /*main-navigation*/
@@ -527,17 +531,23 @@ img {
 }
 
 /*catalog*/
-
-
+.page-catalog{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    
+}
 .name-page{
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
     color: var(--background-navigation);
     background-color: var(--fill-name-page);
+    grid-column: 1/-1;
 }
 .breadcrumbs{
     list-style: none;
+    grid-column: 1/-1;
+   
 }
 .breadcrumbs a{
     font-family: "PT Sans", "Arial", sans-serif;
@@ -554,6 +564,7 @@ img {
     font-style: normal;
     font-weight: normal;
     color: var(--basic-black);
+    grid-column: 1/2;
 }
 .background-filter{
     background-color: var(--fill-filter);
@@ -573,8 +584,6 @@ img {
     text-transform: uppercase; 
     
 }
-
-
 /*filter-price*/
 .price,
 .dash-price{
@@ -749,7 +758,12 @@ img {
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;  
-
+}
+/*block-description*/
+.block-description{
+    grid-column:1/-1;
+    padding-bottom: 68px;
+    padding-top: 64px;
 }
 /*footer*/
 
@@ -916,3 +930,5 @@ img {
 .background-modal-basket{
     background-color: var(--modal-basket-background);
 }
+/* потом поменять*/
+.modal-basket{grid-column: 1/3;}
