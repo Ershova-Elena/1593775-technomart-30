@@ -24,7 +24,7 @@
               <input class="header-form-search" type="search" placeholder="Поиск:">
             </form>
             <a class="header-bookmarks" href="blank.html">Закладки</a>
-            <a class="heder-basket" href="blank.html">Корзина</a>
+            <a class="header-basket" href="blank.html">Корзина</a>
             <a class="header-checkout" href="blank.html">Оформить заказ</a>
           </div>
         </div> 
@@ -40,7 +40,7 @@
             <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
             <div class="login-interface">
-              <a class="profile" href="#">Равшан Джамшутович</a>
+              <a class="profile" href="#">Равшан Джамшутович</a><br>
               <a class="my-orders" href="#">Мои заказы</a>
               <a class="personal-area" href="#"> Личный кабинет</a>
             </div>
@@ -60,6 +60,7 @@
     </header>
 
       <main class="container page-catalog">
+        
           <ul class="breadcrumbs">
               <li><a href="catalog.html">Каталог</a></li>
               <li><a href="blank.html">Инструмент</a></li>
@@ -68,9 +69,27 @@
           
           <h1 class="name-page" >ПЕРФОРАТОРЫ</h1>
           <section class="filters"> 
-            <div class="background-filter"><h2>Фильтр:</h2></div>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru" >
-                <fieldset>
+            <div class="background-filter name-filter "><h2>Фильтр:</h2></div>   
+            <div class="background-filter sort-filter">
+              <h2>Сортировка:</h2>
+              <ul class="sotr-input-radio"> 
+                  <li>
+                    <input class="sort-input" type="radio" name="sort" value="by-price" id="filter-by-price" checked>
+                    <label for="filter-by-price">По цене</label>
+                  </li>
+                  <li>
+                      <input class="sort-input"  type="radio" name="sort" value="by-type" id="filter-by-type"> 
+                      <label for="filter-by-type">По типу</label>
+                  </li>
+                  <li>
+                      <input class="sort-input"  type="radio" name="sort" value="by-functionality" id="filter-by-functionality">
+                      <label for="filter-by-functionality">По функционалу</label>
+                  </li>
+              </ul>
+            </div>
+              
+                <fieldset class="fieldset-price">
                     <legend class="heading-filter">ЦЕНА:</legend>
                     <div class="background-filter "><input type="range" min="0" max="30000"></div>
 
@@ -78,71 +97,55 @@
                     <p class="dash-price"> — </p>
                     <div class="background-filter price"><p>30000</p></div>
                 </fieldset>
-                <fieldset>
+                <fieldset class="fieldset-manufacturer">
                     <legend class="heading-filter">ПРОИЗВОДИТЕЛИ:</legend>
-                    <ul>
-                        <li class="filter-option filter-checkbox">
+                    <ul class="filter-checkbox">
+                        <li class="filter-option">
                             <input class="filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch"  checked>
                             <label for="filter-bosch">BOSCH</label>
                         </li>
-                        <li class="filter-option filter-checkbox" >
+                        <li class="filter-option" >
                             <input class="filter-input-checkbox filter-input" type="checkbox" name="interskol" id="filter-interscol" >
                             <label for="filter-interscol">ИНТЕРСКОЛ</label>
                         </li>
-                        <li class="filter-option filter-checkbox">
+                        <li class="filter-option">
                             <input class="filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked>
                             <label for="filter-makita">MAKITA</label>
                         </li>
-                        <li class="filter-option filter-checkbox">
+                        <li class="filter-option">
                             <input class="filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
                             <label for="filter-dewalt">DEWALT</label>
                         </li>
-                        <li class="filter-option filter-checkbox">
+                        <li class="filter-option">
                             <input class="filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
                             <label for="filter-hitachi">HITACHI</label>
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="fieldset-radio">
                     <legend class="heading-filter">ПИТАНИЕ:</legend>
-                    <ul>
-                        <li class="filter-option filter-radio">
+                    <ul class="filter-radio" >
+                        <li class="filter-option">
                             <input class="filter-input-radio filter-input" type="radio" name="power-supply" id="filter-battery" value="battery" checked>
                             <label for="filter-battery">Аккумуляторные</label>
                         </li>
-                        <li class="filter-option filter-radio">
+                        <li class="filter-option">
                             <input class="filter-input-radio filter-input" type="radio" name="power-supply" id="filter-mains-supply" value="mains-supply">
                             <label for="filter-mains-supply">Сетевые</label>
                         </li>
                     </ul>
                 </fieldset>
             
-               <div class="background-filter">
-                    <h2>Сортировка:</h2>
-                    <ul class="sotr-input-radio"> 
-                        <li>
-                          <input class="sort-input" type="radio" name="sort" value="by-price" id="filter-by-price" checked>
-                          <label for="filter-by-price">По цене</label>
-                        </li>
-                        <li>
-                            <input class="sort-input"  type="radio" name="sort" value="by-type" id="filter-by-type"> 
-                            <label for="filter-by-type">По типу</label>
-                        </li>
-                        <li>
-                            <input class="sort-input"  type="radio" name="sort" value="by-functionality" id="filter-by-functionality">
-                            <label for="filter-by-functionality">По функционалу</label>
-                        </li>
-                    </ul>
-                </div>
+               
                 <button class="button-filter" type="submit">Показать</button>
             </form>
-        </section>
+          </section>
 
-        <section class="catalog">
-            <h2>Список перфораторов</h2>
-            <ul class="list-cards-product">
+          <section class="catalog">
+            <h2 class="hidden">Список перфораторов</h2>
+            <ul class="list-cards-product-catalog">
                 <li class="card-product">
-                    <img src="img/content/popular_goods/snippet-945 copy 2.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                    <img src="img/content/popular_goods/snippet-945 copy 2.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">`
                     <p class="product-name">Перфоратор BOSCH BFG 6000</p>
                     <p class="old-price"><s>30500 Р.</s></p>
                     <p class="new-price">25500 Р.</p>
@@ -184,6 +187,7 @@
                 <li class="card-product">
                     <img src="img/content/popular_goods/snippet-18927 copy 3.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                     <p class="product-name">Перфоратор BOSCH BFG 2000</p>
+                    <p class="old-price"><s></s></p>
                     <p class="new-price">12500 Р.</p>
                     <button class="buy-button" type="button">Купить</button>
                     <button class="bookmark-button" type="button">В закладки</button>
@@ -207,6 +211,7 @@
                 <li class="card-product">
                     <img src="img/content/popular_goods/snippet-18927 copy 3.jpg" width="127" height="112"  alt="Перфоратор BOSCH BFG 2000">
                     <p class="product-name">Перфоратор BOSCH BFG 6000</p>
+                    <p class="old-price"><s></s></p>
                     <p class="new-price">12500 Р.</p>
                     <button class="buy-button" type="button">Купить</button>
                     <button class="bookmark-button" type="button">В закладки</button>
@@ -214,25 +219,25 @@
             </ul>
 
             <ul class="pagination-list">
-                <li class="pagination-item pagination-item-current"><a></a>1</li>
+                <li class="pagination-item pagination-item-current"><a>1</a></li>
                 <li class="pagination-item"><a href="#">2</a></li>
                 <li class="pagination-item"><a href="#">3</a></li>
                 <li class="pagination-item"><a href="#">СЛЕДУЮЩАЯ</a></li>
             </ul>
-
-        </section>
-        <div class="block-description">
-          <section>
-            <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-              <p>
-                Перфоратор — универсальный строительный инструмент.
-                Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-                Существуют электромеханические и пневматические перфораторы.
-                Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
-                В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-              </p>   
           </section>
-        </div>
+        
+          <div class="block-description">
+            <section>
+              <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+                <p>
+                  Перфоратор — универсальный строительный инструмент.
+                  Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+                  Существуют электромеханические и пневматические перфораторы.
+                  Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
+                  В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+                </p>   
+            </section>
+          </div>
     
         <section class="modal modal-basket">
             <h2>Окно о добавлении товара в корзину</h2>
@@ -253,19 +258,19 @@
         <div class="footer-wrapper">
           <div class="container">
             <section class="footer-navigatoin">
-              <h2>Нижняя навигация</h2>
-              <a class="footer-logo"><img src="img/logo/logo-footer.png" width="220" height="68" alt="Логотип Техномарт"></a>
-              <ul class="site-navigation">
-                <li class="nav-item"><a href="blank.html">Компания</a></li>
-                <li class="nav-item"><a href="blank.html">Новости</a></li>
-                <li class="nav-item"><a href="catalog.html">Каталог</a></li>
-                <li class="nav-item"><a href="blank.html">Доставка</a></li>
-                <li class="nav-item"><a href="blank.html">Контакты</a></li>
+              <h2 class="hidden">Нижняя навигация</h2>
+              <a class="footer-logo" href="index.html"><img src="img/logo/logo-footer.png" width="220" height="68" alt="Логотип Техномарт"></a>
+              <ul class="footer-site-navigation">
+                <li class="footer-nav-item"><a href="blank.html">Компания</a></li>
+                <li class="footer-nav-item"><a href="blank.html">Новости</a></li>
+                <li class="footer-nav-item"><a href="catalog.html">Каталог</a></li>
+                <li class="footer-nav-item"><a href="blank.html">Доставка</a></li>
+                <li class="footer-nav-item"><a href="blank.html">Контакты</a></li>
                 </ul>
               </section>
   
             <section class="footer-additional-navigation">
-              <h2>Адрес и дополнительная навигация</h2>
+              <h2 class="hidden">Адрес и дополнительная навигация</h2>
                 <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
                 <a class="footer-phone-link" href="tel: +78125550555">+7 (812) 555-05-55</a></p>
                 <ul class="additional-navigation">
@@ -280,18 +285,30 @@
         <div class="footer-two-wrapper">
           <div class="container">
             <section class="feedback">
-                <h2>Обратная связь</h2>
+                <h2 class="hidden">Обратная связь</h2>
                 <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
                 Все права защищены</p>
                 <ul class="list-social">
-                  <li>
-                    <a class="social-button vk" href="#"><Вконтакте</a>
+                  <li class="item-social">
+  
+                    <a class="social-button vk" href="#">
+                      <span class="hidden">Вконтакте</span>
+                      <svg width="25" height="14" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5403 11.7281C16.4609 11.4384 17.6395 13.6406 18.8943 14.4834C19.836 15.1219 20.5573 14.9841 20.5573 14.9841L23.9017 14.9372C23.9017 14.9372 25.6495 14.8322 24.8232 13.4803C24.7549 13.3678 24.3389 12.4781 22.334 10.6472C20.2376 8.73186 20.5217 9.04218 23.0456 5.73093C24.5835 3.71249 25.1988 2.47968 25.0062 1.95468C24.8213 1.44936 23.6918 1.58061 23.6918 1.58061L19.9237 1.60593C19.5568 1.60686 19.2458 1.71749 19.1042 2.08874C19.1013 2.09249 18.5062 3.65061 17.7127 4.9753C16.0362 7.77749 15.3669 7.92655 15.0896 7.75124C14.4531 7.3453 14.6139 6.1228 14.6139 5.25374C14.6139 2.5378 15.0299 1.4053 13.7992 1.1128C13.388 1.0153 13.0876 0.951552 12.0389 0.942177C10.6985 0.922489 9.56027 0.942177 8.91508 1.25061C8.48656 1.45968 8.15819 1.91811 8.35753 1.94436C8.6079 1.97718 9.1693 2.09436 9.46975 2.49374C9.8559 3.01124 9.84434 4.17093 9.84434 4.17093C9.84434 4.17093 10.0649 7.36874 9.32434 7.7653C8.8159 8.03718 8.12064 7.48218 6.62516 4.9378C5.86153 3.63655 5.28471 2.19843 5.28471 2.19843C5.28471 2.19843 5.17301 1.93124 4.97079 1.78499C4.73005 1.61155 4.39301 1.55624 4.39301 1.55624L0.816563 1.57874C0.816563 1.57874 0.27923 1.59374 0.0818227 1.82436C-0.0934366 2.02874 0.0673782 2.45061 0.0673782 2.45061C0.0673782 2.45061 2.86864 8.90155 6.04064 12.1509C8.94879 15.1341 12.2537 14.9362 12.2537 14.9362H13.7511C13.7511 14.9362 14.2027 14.8856 14.4338 14.6437C14.6495 14.4187 14.6399 13.9959 14.6399 13.9959C14.6399 13.9959 14.61 12.0187 15.5403 11.7281Z" fill="white"/>
+                        </svg>
+                  </a>
                   </li>
-                  <li>
-                    <a class="social-button fb" href="#">Фейсбук</a>
+                  <li class="item-social fb">
+                    <a class="social-button" href="#">
+                      <span class="hidden">Фейсбук</span>
+                      <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg>
+                    </a>
                   </li>
-                  <li>
-                    <a class="social-button insta" href="#">Инстаграм</a>
+                  <li class="item-social insta">
+                    <a class="social-button" href="#">
+                      <span class="hidden">Инстаграм</span>
+                      <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.2a6.5 6.5 0 1012.6 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/></svg>
+                      </a>
                   </li>
                 </ul>
   
