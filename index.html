@@ -20,12 +20,13 @@
       <div class="header-panel-wrapper">
         <div class="container">
           <div class="header-panel">
-            <a class="header-logo"><img src="img/logo/logo-header.svg" width="107" height="17" alt="Логотип Техномарт"></a>
-            <form  action="#" method="POST">
-              <input class="header-form-search" type="search" placeholder="Поиск:">
+            <a class="header-logo"><img src="img/logo/logo-header.svg" width="107" height="18" alt="Логотип Техномарт"></a>
+            <form class="search" action="#" method="POST">
+              <input class="header-form-search" type="text" placeholder="Поиск:">
+              <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" fill="#fff"/></svg>
             </form>
-            <a class="header-bookmarks" href="blank.html">Закладки</a>
-            <a class="header-basket" href="blank.html">Корзина</a>
+            <a class="header-bookmarks" href="blank.html">Закладки: 0</a>
+            <a class="header-basket" href="blank.html">Корзина: 0</a>
             <a class="header-checkout" href="blank.html">Оформить заказ</a>
           </div>
         </div>
@@ -33,14 +34,16 @@
         <div class="container">
           <div class="header-info">
             <div class="heading">
-              <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+              <p>Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
             </div>
-            <div>
+            <div class="header-contact">
               <a class="header-phone-link" href="tel:+7812550555">+7 (812) 555-05-55</a>
               <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="login-interface">
-              <button class="header-button login-button" type="button">Войти</button>
+              <button class="header-button login-button" type="button">Войти
+                <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.2 8.5L5.7 0v6H0v5h5.7v6l8.5-8.5z" fill="#C5C5C5"/><path d="M16.2 15h-4.8v2h4.8c2 0 2.8-1.8 2.9-3V3c0-1.2-.8-3-3-3h-4.7v2h4.8c.8 0 1 .7 1 1v11c0 .3-.2 1-1 1z" fill="#C5C5C5"/></svg>
+              </button>
               <button class="header-button registration-button" type="button">Регистрация</button>
             </div>
           </div>
@@ -53,15 +56,17 @@
                 <li class="nav-item"><a href="blank.html">Спецпредложения</a></li>
                 <li class="nav-item"><a href="blank.html">Доставка</a></li>
                 <li class="nav-item"><a href="blank.html">Контакты</a></li>
+                
               </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container main">
-      <h1 class="hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+    <main class="main">
+      <div class="container">
+        <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <section class="offers">
-          <h2 class="hidden">Предложения сайта</h2>
+          <h2 class="visually-hidden">Предложения сайта</h2>
           <ul  class="offers-list offers-list-one">
             <li class="offers-item materials-block">
               <h3>Материалы</h3>
@@ -77,16 +82,44 @@
             </li>
             <li>
               <ul class="offers-list offers-list-two ">
-                <li class="slider slider-grid"> 
-                  <div class="slider-text">
-                    <h3 class="heading-slider">Перфораторы</h3>
-                    <p class="paragraph-slider">Настоящие мужские игрушки</p>
-                  </div>
-                  <div class="slider-button">
-                    <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
-                  </div> 
-                  <img class="slider-image" src="img/content/slider.jpg" width="620" height="256" alt="Мужчина с перфоратором">
-                </li>
+                <li class="slider slider-grid">
+                  <ul class="slider-list">
+                    <li class="slider-item slide"> 
+                      <div class="slider-text">
+                        <h3 class="heading-slider">Перфораторы</h3>
+                        <p class="paragraph-slider">Настоящие мужские игрушки</p>
+                      </div>
+                      <div class="slider-button">
+                        <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+                        <button class="button-back" type="button" aria-label="вперед"></button>
+                        <button class="button-forward" type="button" aria-label="назад"></button>
+                      </div> 
+                      
+                      <div class="slider-controls"> 
+                        <button type="button"  aria-label="Первый слайд"></button>
+                        <button type="button" aria-label="Второй слайд"></button>
+                      </div>
+                      <img class="slider-image" src="img/content/slider.jpg" width="620" height="256" alt="Мужчина с перфоратором">
+                    </li>
+
+                    <li class="slider-item slide slide-current"> 
+                      <div class="slider-text">
+                        <h3 class="heading-slider">Перфораторы</h3>
+                        <p class="paragraph-slider">Настоящие мужские игрушки</p>
+                      </div>
+                      <div class="slider-button">
+                        <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+                        <button class="button-back" type="button" aria-label="вперед"></button>
+                        <button class="button-forward" type="button" aria-label="назад"></button>
+                      </div> 
+                      <div class="slider-controls"> 
+                        <button type="button" aria-label="Первый слайд"></button>
+                        <button class="current-button" type="button" aria-label="Второй слайд"></button>
+                      </div>
+                      <img class="slider-image" src="img/content/slider.jpg" width="620" height="256" alt="Мужчина с перфоратором">
+                    </li>
+                   </ul>
+                 </li>
                  <li  class="offers-item block-sale">
                   <h3>Скидки 50%</h3>
                   <a class="button-offers-item" href="blank.html">На 350 ТОВАРОВ</a>
@@ -102,21 +135,25 @@
 
         <section class="popular-goods">
           <div class="block-section-headline">
-            <h2 class="">Популярные товары:</h2>
+            <h2 class="section-headline">Популярные товары:</h2>
             <a class="button" href="catalog.html">все популярные товары</a>
           </div>
           <div class="block-cards-product">
             <ul class="list-cards-product">
               <li class="card-product">
-                <img src="img/content/popular_goods/snippet-32961 copy 3.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                <div class="image-product">
+                  <img src="img/content/popular_goods/snippet-32961 copy 3.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 9000</h3>
                 <p class="old-price"><s>32500 Р.</s></p>
                 <p class="new-price">25500 Р.</p>
                 <button class="buy-button" type="button">Купить</button>
                 <button class="bookmark-button" type="button">В закладки</button>
               </li>
-              <li class="card-product">
-                <img src="img/content/popular_goods/snippet-18927 copy 3.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+              <li class="card-product new-element">
+                <div class="image-product">
+                   <img src="img/content/popular_goods/snippet-18927 copy 3.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                  </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 3000</h3>
                 <p class="old-price"><s>22500 Р.</s></p>
                 <p class="new-price">15500 Р.</p>
@@ -124,15 +161,19 @@
                 <button class="bookmark-button" type="button">В закладки</button>
               </li>
               <li class="card-product">
-                <img src="img/content/popular_goods/snippet-945 copy 2.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <div class="image-product">
+                  <img src="img/content/popular_goods/snippet-945 copy 2.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 6000</h3>
                 <p class="old-price"><s>30500 Р.</s></p>
                 <p class="new-price">25500 Р.</p>
                 <button class="buy-button" type="button">Купить</button>
                 <button class="bookmark-button" type="button">В закладки</button>
               </li>
-              <li class="card-product">
-                <img src="img/content/popular_goods/snippet-18927 copy 3.jpg"  width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+              <li class="card-product new-element">
+                <div class="image-product">
+                  <img src="img/content/popular_goods/snippet-18927 copy 3.jpg"  width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 2000</h3>
                 <p class="old-price"><s>22500 Р.</s></p>
                 <p class="new-price">12500 Р.</p>
@@ -178,25 +219,29 @@
             </ul>
           </div>
         </section>
-
-        <section class="block-services">
-          <div>
+      </div>
+      <div class="wrapper-service">
+        <section class="block-services container">
             <h2 class="headline-block">Сервисы</h2>
-            <p class="text">Хороший интернет-магазин отличается от плохого не только ценами!</p>
-            <p class="text">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+            <div class="text-block-services">
+              <p class="text">Хороший интернет-магазин отличается от плохого не только ценами!</p>
+              <p class="text">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+            </div>
             <div class="slider-services">
-              <a class="button-services" href="#">Доставка</a>
-              <a class="button-services" href="#">Гарантия</a>
-              <a class="button-services" href="#">Кредит</a>
-              <ul class="list-services">
-               <li class="item-service servise-delivery">
+              <div class="slider-button-services">
+                <button class="button-services button-services-current" type="button">Доставка</button>
+                <button class="button-services" type="button">Гарантия</button>
+                <button class="button-services" type="button">Кредит</button>
+             </div>
+              <ul class="list-services slider-servise">
+               <li class="item-service servise-delivery slide-service-current">
                  <h3 class="caption-item-service">Доставка</h3>
                  <p class="text">Мы с удовольствием доставим ваш товар прямо <br>
                   к вашему подъезду совершенно бесплатно!<br>
                   Ведь мы неплохо заработаем, <br>
                   поднимая его на ваш этаж!</p>
                </li>
-                <li class=" item-service servise-guarantee">
+                <li class="item-service servise-guarantee ">
                   <h3 class="caption-item-service">Гарантия</h3>
                   <p class="text">Если купленный у нас товар поломается или заискрит, <br>
                   а также в случае пожара, спровоцированного его <br>
@@ -206,15 +251,15 @@
                 </li>
                 <li class="item-service servise-credit">
                   <h3 class="caption-item-service">Кредит</h3>
-                  <p class="text">Залезть в долговую яму стало проще! <br>
-                  Кредитные консультанты придут вам на помощь.</p>
+                  <p class="text">Залезть в долговую яму стало проще!</p>
+                  <p class="text">Кредитные консультанты придут вам на помощь.</p>
                   <button class="button" type="button">ОТПРАВИТЬ ЗАЯВКУ</button>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-
+      <div class="container">
         <div class="contact-info">
            <section class="about-company">
              <h2 class="headline-block">КОМПАНИЯ «Техномарт»</h2>
@@ -270,14 +315,14 @@
               <!-- Здесь будет карта -->
               <button class="modal-close" type="button">Закрыть</button>
             </section>
-
+        </div>
     </main>
 
     <footer class="main-footer">
       <div class="footer-wrapper">
         <div class="container">
           <section class="footer-navigatoin">
-            <h2 class="hidden">Нижняя навигация</h2>
+            <h2 class="visually-hidden">Нижняя навигация</h2>
             <a class="footer-logo"><img src="img/logo/logo-footer.png" width="220" height="68" alt="Логотип Техномарт"></a>
             <ul class="footer-site-navigation">
               <li class="footer-nav-item"><a href="blank.html">Компания</a></li>
@@ -289,7 +334,7 @@
             </section>
 
           <section class="footer-additional-navigation">
-            <h2 class="hidden">Адрес и дополнительная навигация</h2>
+            <h2 class="visually-hidden">Адрес и дополнительная навигация</h2>
               <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
               <a class="footer-phone-link" href="tel: +78125550555">+7 (812) 555-05-55</a></p>
               <ul class="additional-navigation">
@@ -304,14 +349,14 @@
       <div class="footer-two-wrapper">
         <div class="container">
           <section class="feedback">
-              <h2 class="hidden">Обратная связь</h2>
+              <h2 class="visually-hidden">Обратная связь</h2>
               <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
               Все права защищены</p>
               <ul class="list-social">
                 <li class="item-social">
 
                   <a class="social-button vk" href="#">
-                    <span class="hidden">Вконтакте</span>
+                    <span class="visually-hidden">Вконтакте</span>
                     <svg width="25" height="14" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15.5403 11.7281C16.4609 11.4384 17.6395 13.6406 18.8943 14.4834C19.836 15.1219 20.5573 14.9841 20.5573 14.9841L23.9017 14.9372C23.9017 14.9372 25.6495 14.8322 24.8232 13.4803C24.7549 13.3678 24.3389 12.4781 22.334 10.6472C20.2376 8.73186 20.5217 9.04218 23.0456 5.73093C24.5835 3.71249 25.1988 2.47968 25.0062 1.95468C24.8213 1.44936 23.6918 1.58061 23.6918 1.58061L19.9237 1.60593C19.5568 1.60686 19.2458 1.71749 19.1042 2.08874C19.1013 2.09249 18.5062 3.65061 17.7127 4.9753C16.0362 7.77749 15.3669 7.92655 15.0896 7.75124C14.4531 7.3453 14.6139 6.1228 14.6139 5.25374C14.6139 2.5378 15.0299 1.4053 13.7992 1.1128C13.388 1.0153 13.0876 0.951552 12.0389 0.942177C10.6985 0.922489 9.56027 0.942177 8.91508 1.25061C8.48656 1.45968 8.15819 1.91811 8.35753 1.94436C8.6079 1.97718 9.1693 2.09436 9.46975 2.49374C9.8559 3.01124 9.84434 4.17093 9.84434 4.17093C9.84434 4.17093 10.0649 7.36874 9.32434 7.7653C8.8159 8.03718 8.12064 7.48218 6.62516 4.9378C5.86153 3.63655 5.28471 2.19843 5.28471 2.19843C5.28471 2.19843 5.17301 1.93124 4.97079 1.78499C4.73005 1.61155 4.39301 1.55624 4.39301 1.55624L0.816563 1.57874C0.816563 1.57874 0.27923 1.59374 0.0818227 1.82436C-0.0934366 2.02874 0.0673782 2.45061 0.0673782 2.45061C0.0673782 2.45061 2.86864 8.90155 6.04064 12.1509C8.94879 15.1341 12.2537 14.9362 12.2537 14.9362H13.7511C13.7511 14.9362 14.2027 14.8856 14.4338 14.6437C14.6495 14.4187 14.6399 13.9959 14.6399 13.9959C14.6399 13.9959 14.61 12.0187 15.5403 11.7281Z" fill="white"/>
                       </svg>
@@ -319,13 +364,13 @@
                 </li>
                 <li class="item-social fb">
                   <a class="social-button" href="#">
-                    <span class="hidden">Фейсбук</span>
+                    <span class="visually-hidden">Фейсбук</span>
                     <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg>
                   </a>
                 </li>
                 <li class="item-social insta">
                   <a class="social-button" href="#">
-                    <span class="hidden">Инстаграм</span>
+                    <span class="visually-hidden">Инстаграм</span>
                     <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.2a6.5 6.5 0 1012.6 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/></svg>
                     </a>
                 </li>
@@ -338,7 +383,7 @@
 
               <p class="developed">
                 Разработано - <br>
-                <a class="footer-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+                <a class="footer-button" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
               </p>
           </section>
         </div>
