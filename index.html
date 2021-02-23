@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/Favicon/152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/Favicon/icon180.png">
@@ -56,7 +56,6 @@
                 <li class="nav-item"><a href="blank.html">Спецпредложения</a></li>
                 <li class="nav-item"><a href="blank.html">Доставка</a></li>
                 <li class="nav-item"><a href="blank.html">Контакты</a></li>
-                
               </ul>
             </nav>
         </div>
@@ -142,7 +141,7 @@
             <ul class="list-cards-product">
               <li class="card-product">
                 <div class="image-product">
-                  <img src="img/content/popular_goods/snippet-32961 copy 3.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                  <img src="img/content/popular_goods/snippet-32961.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
                 </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 9000</h3>
                 <p class="old-price"><s>32500 Р.</s></p>
@@ -152,7 +151,7 @@
               </li>
               <li class="card-product new-element">
                 <div class="image-product">
-                   <img src="img/content/popular_goods/snippet-18927 copy 3.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                   <img src="img/content/popular_goods/snippet-18927.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                   </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 3000</h3>
                 <p class="old-price"><s>22500 Р.</s></p>
@@ -162,7 +161,7 @@
               </li>
               <li class="card-product">
                 <div class="image-product">
-                  <img src="img/content/popular_goods/snippet-945 copy 2.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                  <img src="img/content/popular_goods/snippet-945.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                 </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 6000</h3>
                 <p class="old-price"><s>30500 Р.</s></p>
@@ -172,7 +171,7 @@
               </li>
               <li class="card-product new-element">
                 <div class="image-product">
-                  <img src="img/content/popular_goods/snippet-18927 copy 3.jpg"  width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                  <img src="img/content/popular_goods/snippet-18927.jpg"  width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                 </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 2000</h3>
                 <p class="old-price"><s>22500 Р.</s></p>
@@ -257,8 +256,8 @@
                 </li>
               </ul>
             </div>
-          </div>
         </section>
+      </div>
       <div class="container">
         <div class="contact-info">
            <section class="about-company">
@@ -287,33 +286,37 @@
 
 
             <section class="modal modal-feedback">
-              <h2>Форма Обратной связи</h2>
+              <h2 class="visually-hidden">Форма Обратной связи</h2>
             
               <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
-                <p class="fedback-item">
-                  <label class="feedback-name" for="name">Ваше имя:</label><br>
-                  <input class="feedback-name" id="name" type="text" placeholder="Имя Фамилия">
-                </p>
-                <p class="feedback-item">
-                  <label class="feedback-email" for="emael">Ваш e-mail:</label><br>
-                  <input class="feedback-email" id="emael" type="email" placeholder="email@example.com">
-                </p>
-                <p class="feedback-item">
-                  <label class="feedback-comment" for="comment">Текст письма:</label><br>
-                  <textarea class="feedback-comment" placeholder="В свободной форме"  id="comment" rows="4"></textarea>
-                </p>
-                <div class="modal-button-background">
-                  <button class="button" type="button">Отправить</button>
+                <div class="modal-wrapper">
+                  <p class="fedback-item">
+                    <label class="feedback-name" for="name">Ваше имя:</label><br>
+                    <input class="feedback-name" id="name" type="text" placeholder="Имя Фамилия">
+                  </p>
+                  <p class="feedback-item">
+                    <label class="feedback-email" for="emael">Ваш e-mail:</label><br>
+                    <input class="feedback-email" id="emael" type="email" placeholder="email@example.com">
+                  </p>
+                  <p class="feedback-item">
+                    <label class="feedback-comment" for="comment">Текст письма:</label><br>
+                    <textarea class="feedback-comment" placeholder="В свободной форме"  id="comment" rows="4"></textarea>
+                  </p>
                 </div>
-                <button class="modal-close" type="button">Закрыть</button>
+                <div class="modal-button-background">
+                  <div class="modal-wrapper">
+                    <button class="button modal-send-button" type="button">Отправить</button>
+                  </div>
+                </div>
+                <button class="modal-close" type="button" aria-label="Закрыть"></button>
               </form>
             </section>
 
 
             <section class="modal modal-map">
-              <h2>Как до нас добраться</h2>
-              <!-- Здесь будет карта -->
-              <button class="modal-close" type="button">Закрыть</button>
+              <h2 class="visually-hidden">Как до нас добраться</h2>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="940" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+              <button class="modal-close" type="button" aria-label="Закрыть"></button>
             </section>
         </div>
     </main>
@@ -336,7 +339,7 @@
           <section class="footer-additional-navigation">
             <h2 class="visually-hidden">Адрес и дополнительная навигация</h2>
               <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              <a class="footer-phone-link" href="tel: +78125550555">+7 (812) 555-05-55</a></p>
+              <a class="footer-phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
               <ul class="additional-navigation">
                 <li class="additional-nav-item"><a href="catalog.html">Материалы</a></li>
                 <li class="additional-nav-item"><a href="catalog.html">Техника</a></li>
