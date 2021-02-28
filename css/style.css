@@ -1070,6 +1070,18 @@ img {
     position: absolute;
     z-index: 0;
 }
+.card-product:focus-within {
+    -webkit-box-shadow: 0px 4px 20px 0px var(--shadow-logo-manufacturer);
+    box-shadow: 0px 4px 20px 0px var(--shadow-logo-manufacturer);
+}  
+.card-product:focus-within img{
+    display: none;
+}  
+.card-product:focus-within ~ .buy-button,
+.card-product:focus-within ~ .bookmark-button{
+position: absolute;
+z-index: 0;
+}
 
 /* block popular manufacturer*/
 .popular-manufacturer{
