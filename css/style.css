@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+  /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 
 
 
@@ -372,6 +379,7 @@ img {
     -ms-grid-column-align: end;
         justify-self: end;
     max-width: 300px;
+    height: 70px;
     position: relative;
     top: 59px;
 }
@@ -431,7 +439,7 @@ img {
     margin-left: 10px;
 }
 .login-button{
-    padding: 10px 24px 9px 42px;
+    padding: 9px 21px 9px 44px;
     position: relative;
 }
 .login-interface svg{
@@ -475,16 +483,17 @@ img {
     margin: 0;
     width: 940px;
 }
-.nav-item{
-    padding:17px 28px 19px 28px;
+.nav-item a{
+    display: block;
+    padding: 17px 28px 19px 28px;
     
 }
 
 .nav-item:last-child{
-   padding-right:54px;
+   padding-right:25px;
 }
 .nav-item:first-child{
-    padding-left: 52px;
+    padding-left: 25px;
 }
 .nav-item:hover{
     background-color:var(--color-header-panel) ;
@@ -643,7 +652,7 @@ img {
     grid-row: 1/-1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-column: 1/3;
+    grid-column: 1/2;
     position: relative;
 }
 .slider-list{
@@ -680,24 +689,22 @@ img {
     left: 24px;
     z-index: 20;
 }
-.button-back::before{
-    content: '';
-    background-image: url(../img/decorative_icons/icon-left.svg);
+.button-back{
     width: 22px;
     height: 40px;
     cursor: pointer;
     position: absolute;
+    position: relative;
     margin: 0;
     top: 122px;
     left: 24px;
     z-index: 20;
-}
-.button-forward::before{
-    content: '';
     background-image: url(../img/decorative_icons/icon-left.svg);
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    background-color: transparent;
+    border: none;
+     
+}
+.button-forward{
     width: 22px;
     height: 40px;
     cursor: pointer;
@@ -706,6 +713,12 @@ img {
     top:122px;
     left: 578px;
     z-index: 20;
+    background-image: url(../img/decorative_icons/icon-left.svg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background-color: transparent;
+    border: none;
 }
 .slider-button .button{
     position: absolute;
@@ -737,7 +750,7 @@ img {
     border-radius: 50%;
     cursor: pointer;
     border: none;
-    outline: none;
+    
 }
 .slider-controls .current-button{
     background-color: var(--basic-red);
@@ -1214,7 +1227,6 @@ img {
             flex-direction: column;
     width: 240px;
     height: 61px;
-    outline: none;
     border: none;
 
 }
@@ -1369,13 +1381,18 @@ img {
     margin-left: 20px;
 }
 .profile-exit{
-    position: relative;
+    position: absolute;
+    top: -11px;
+    right: 15px;
+    padding: 16px;
+    margin-top: 4px;
 }
 .profile-exit svg{
     position: absolute;
-    top: 14px;
-    left: -37px;
+    top: 8px;
+    left: 10px;
 }
+
 .profile:hover path,
 .profile-exit:hover path{
     fill: var(--basic-grey);
@@ -1384,7 +1401,7 @@ img {
     color: var(--basic-greylight);
 }
 .profile:focus path,
-.profile-exit:hover path{
+.profile-exit:focus path{
     fill: var(--basic-greylight);
 }
 .interface{
@@ -1394,6 +1411,7 @@ img {
     -ms-grid-row-span: 1;
     grid-row: 1/2;
     max-width: 300px;
+    max-height: 30px;
     top: 97px;
 }
 .interface::before{
@@ -1498,36 +1516,26 @@ img {
     font-style: normal;
     font-weight: normal;
     color: var(--basic-black);
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-   
 }
-.filter{
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 220px 1fr;
-    grid-template-columns: 220px 1fr;
-}
-.name-filter{
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    padding-left: 18px;
+
+.flex-filter-one{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .name-filter h2{
     margin-top: 9px;
+    width: 202px;
+    padding-left: 18px;
+   
 }
-.sort-filter{
-    grid-column: 2/-1;
-}
-.sort-filter h2{
-    padding-left: 19px;
-}
-
 .background-filter{
     background-color: var(--fill-filter);
     height: 37px;
+    border-radius: 2px;
 }
 fieldset{
     border: none;
@@ -1541,33 +1549,52 @@ fieldset{
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+
 }
 .heading-filter{
-    font: inherit;
     font-weight: bold;
     font-size: 17px;
     line-height: 30px;  
-    text-transform: uppercase; 
-   
-    
+    text-transform: uppercase;    
 }
+.filter ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 18px;
+}
+
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.filter-input:focus + label::before {
+    border-color: var(--special);
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
 /*filter-sort*/
-.sort-filter{
-    grid-column: 2/-1;
+.sort{
     width: 700px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 220px 1fr 38px 38px;
-    grid-template-columns: 220px 1fr 38px 38px;
-    margin-left: 21px;
+    -ms-grid-columns: 220px 402px 38px 38px;
+    grid-template-columns: 220px 402px 38px 38px;
+    -ms-grid-rows: 37px;
+    grid-template-rows: 37px;
+    margin-left: 21px;  
 }
-.sort-filter h2{
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    margin-top: 9px;
+.sort h2{
+    padding-left: 19px;
 }
-.sotr-input-radio{
+
+.sort-input-radio{
     margin: 0;
     padding: 0;
     -ms-grid-column: 2;
@@ -1586,15 +1613,15 @@ fieldset{
     margin-top: -3px;
     margin-left: 21px;
 }
-.sotr-input-radio li{
-    margin-right: 70px;
+.sort-input-radio li{
+    margin-right: 50px;
+    padding-left: 20px;
 }
-.sotr-input-radio li:last-child{
+.sort-input-radio li:last-child{
     margin-right: 0px;
     margin-left: -5px;
 }
 .button-sort{
-    outline: none;
     background-color: transparent;
     border: none;
     position: relative;
@@ -1602,7 +1629,7 @@ fieldset{
 .button-sort svg{
     position: absolute;
     top: 13px;
-    left: 16px;
+    left: 18px;
 }
 .button-sort:last-child svg{
     top:13px;
@@ -1615,21 +1642,18 @@ fieldset{
     fill: var(--basic-red);
 }
 
-.sort-input{
-    display: none;
-    
-}
-.sort-input~label{
+.sort-input + label{
+    font-size: 13px;
     color: var(--color-sort);
     -webkit-text-decoration: underline var(--basic-red) dotted;
             text-decoration: underline var(--basic-red) dotted; 
 }
-.sort-input:hover~label{
+.sort-input:hover + label{
     color: var(--basic-black);
     -webkit-text-decoration: underline var(--basic-red) solid;
             text-decoration: underline var(--basic-red) solid;
 }
-.sort-input:checked~label{
+.sort-input:checked + label{
     color: var(--basic-red);
     text-decoration: none;
 }
@@ -1642,9 +1666,6 @@ fieldset{
 .fieldset-price{
     margin-top: 13px;
     padding-bottom: 14px;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
 }
 .range-controls{
     position: relative;
@@ -1720,29 +1741,19 @@ fieldset{
 
 /*filter-checkbox*/
 /*filter-price*/
+
 .fieldset-manufacturer{
     margin-top: 14px;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-}
-.filter-option label {
-    display: block;
-    cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-.filter-checkbox{
-    position: relative;
-    padding: 0;
-    margin: 0;
-    margin-top: 16px;
 }
 .filter-checkbox .filter-option{
     padding-left: 36px;
     margin-bottom: 20px;
+}
+.filter-checkbox:first-child{
+    margin-top: 18px;
+}
+.filter-checkbox:last-child{
+    margin-bottom: 29px;
 }
 .filter-option{
     list-style: none;
@@ -1750,21 +1761,22 @@ fieldset{
     line-height: 19px;  
     text-transform: uppercase;  
 }
-.filter-option:last-child{
-    margin-bottom: 30px;
+
+
+.filter-input-checkbox + label{
+    padding-left: 36px;
+    margin-bottom: 20px;
 }
 .filter-input-checkbox + label::before{
     content: '';
-    width: 23px;
+    width: 26px;
     height: 23px;
     position: absolute;
     left: 0;
     background: url(../img/decorative_icons/checkbox-off.svg) no-repeat;
-    padding-right: 12px;
 }
 .filter-input-checkbox[type=checkbox]:checked~label::before{
     background: url(../img/decorative_icons/checkbox-on.svg) no-repeat;
-    padding-right: 12px;
     
 }
 .filter-input-checkbox[type=checkbox]:hover~label::before{
@@ -1782,6 +1794,7 @@ fieldset{
     color: var(--color-checkbox-disabled);
 }
 /*filter-radio*/
+
 .fieldset-radio{
     margin-top: 18px;
     -ms-grid-column: 1;
@@ -1791,11 +1804,13 @@ fieldset{
 .filter-radio{
     padding: 0;
     margin: 0;
-    margin-top: 23px;
+    margin-top: 22px;
     position: relative;
 }
-.filter-radio .filter-option{
+.filter-radio{
     margin-bottom: 22px;
+}
+.filter-input-radio + label{
     padding-left: 36px;
 }
 .filter-input-radio[type=radio] ~ label::before{
@@ -2158,32 +2173,36 @@ fieldset{
         -ms-flex-pack: start;
             justify-content: start;
 }
-.item-social{
+
+.social-button{
+    position: relative;
+    display: block;
     height: 44px;
     width: 44px;
     background-color: var(--fill-special-icon);
     border-radius: 50%;
     margin-right: 1px;
+    outline: none;
 }
 .vk svg{
-    position: relative;
+    position: absolute;
     left:9px;
-    top:13px;
+    top:14px;
 }
 .fb svg{
-    position: relative;
+    position: absolute;
     left:16px;
     top:11px;
     
 }
 .insta svg{
-    position: relative;
+    position: absolute;
     left:11px;
     top:11px;
 
 }
-.item-social:hover,
-.item-social:focus{
+.social-button:hover,
+.social-button:focus{
     background-color: var(--basic-red);
 }
 .footer-button{
