@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/Favicon/152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/Favicon/icon180.png">
@@ -47,7 +47,7 @@
               </svg>              
               Равшан Джамшутович
             </a>
-            <a class="profile-exit">
+            <a class="profile-exit" href="#">
               <svg role="img" aria-label="Кнопка выхода из личного кабинета" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.5L11.1 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5"/><path d="M2.1 14V3c0-.3.2-1 1-1h5V0h-5C1 0 .1 1.8.1 3v11c0 1.2.8 3 3 3h5v-2h-5c-.8 0-1-.7-1-1z" fill="#C5C5C5"/></svg> 
             </a>
           </div>
@@ -81,33 +81,35 @@
         <h1 class="name-page" >ПЕРФОРАТОРЫ</h1>
         <section class="filters"> 
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-            <div class="background-filter name-filter "><h2>Фильтр:</h2></div>   
-            <div class="background-filter sort-filter">
-              <h2>Сортировка:</h2>
-              <ul class="sotr-input-radio"> 
-                <li>
-                  <input class="sort-input" type="radio" name="sort" value="by-price" id="filter-by-price" checked>
-                  <label for="filter-by-price">По цене</label>
-                </li>
-                <li>
-                  <input class="sort-input"  type="radio" name="sort" value="by-type" id="filter-by-type"> 
-                  <label for="filter-by-type">По типу</label>
-                </li>
-                <li>
-                  <input class="sort-input"  type="radio" name="sort" value="by-functionality" id="filter-by-functionality">
-                  <label for="filter-by-functionality">По функционалу</label>
-                </li>
-              </ul>
-              <button class="button-sort" type="button">
-                <svg role="img" aria-label="Кнопка на предыдущий элемент сортировки" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
-                </svg>
-              </button>
-              <button class="button-sort" type="button">
-                <svg role="img" aria-label="Кнопка на следующий элемент сортировки" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
-                </svg>
-              </button>
+            <div class="flex-filter-one">
+              <div class="background-filter name-filter "><h2>Фильтр:</h2></div>   
+              <div class="background-filter sort">
+                <h2>Сортировка:</h2>
+                <ul class="sort-input-radio"> 
+                  <li class="sort-filter filter-option">
+                    <input class="sort-input filter-input visually-hidden" type="radio" name="sort" value="by-price" id="filter-by-price" checked>
+                    <label for="filter-by-price" tabindex="0">По цене</label>
+                  </li>
+                  <li class="sort-filter  filter-option">
+                    <input class="sort-input filter-input visually-hidden"  type="radio" name="sort" value="by-type" id="filter-by-type"> 
+                    <label for="filter-by-type" tabindex="0">По типу</label>
+                  </li>
+                  <li class="sort-filter filter-option">
+                    <input class="sort-input filter-input visually-hidden"  type="radio" name="sort" value="by-functionality" id="filter-by-functionality">
+                    <label for="filter-by-functionality" tabindex="0">По функционалу</label>
+                  </li>
+                </ul>
+                <button class="button-sort" type="button">
+                  <svg role="img" aria-label="Кнопка на предыдущий элемент сортировки" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
+                  </svg>
+                </button>
+                <button class="button-sort" type="button">
+                  <svg role="img" aria-label="Кнопка на следующий элемент сортировки" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
+                  </svg>
+                </button>
+              </div>
             </div>
               
             <fieldset class="fieldset-price">
@@ -133,24 +135,24 @@
             </fieldset>
             <fieldset class="fieldset-manufacturer">
               <legend class="heading-filter">ПРОИЗВОДИТЕЛИ:</legend>
-              <ul class="filter-checkbox">
-                <li class="filter-option">
-                  <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="bosch" id="filter-bosch"  checked>
-                  <label for="filter-bosch">BOSCH</label>
+              <ul>
+                <li class="filter-option filter-checkbox">
+                  <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="bosch" id="filter-bosch"  checked >
+                  <label for="filter-bosch" >BOSCH</label>
                 </li>
-                <li class="filter-option" >
+                <li class="filter-option filter-checkbox" >
                   <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="interskol" id="filter-interscol" >
                   <label for="filter-interscol">ИНТЕРСКОЛ</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option filter-checkbox">
                   <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
                   <label for="filter-makita">MAKITA</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option filter-checkbox">
                   <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="dewalt" id="filter-dewalt">
                   <label for="filter-dewalt">DEWALT</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option filter-checkbox">
                   <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="hitachi" id="filter-hitachi">
                   <label for="filter-hitachi">HITACHI</label>
                 </li>
@@ -158,12 +160,12 @@
             </fieldset>
             <fieldset class="fieldset-radio">
               <legend class="heading-filter">ПИТАНИЕ:</legend>
-              <ul class="filter-radio" >
-               <li class="filter-option">
+              <ul>
+               <li class="filter-option filter-radio">
                   <input class="filter-input-radio filter-input visually-hidden" type="radio" name="power-supply" id="filter-battery" value="battery" checked>
                   <label for="filter-battery">Аккумуляторные</label>
                 </li>
-                <li class="filter-option">
+                <li class="filter-option filter-radio">
                   <input class="filter-input-radio filter-input visually-hidden" type="radio" name="power-supply" id="filter-mains-supply" value="mains-supply" >
                   <label for="filter-mains-supply">Сетевые</label>
                 </li>
