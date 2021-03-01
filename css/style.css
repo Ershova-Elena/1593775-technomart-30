@@ -88,7 +88,6 @@
     background-color: var(--basic-white);
     background-position: top center;
     background-repeat: no-repeat;
-
     min-height: 100%;
     display: -ms-grid;
     display: grid;
@@ -97,7 +96,7 @@
     grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     -ms-flex-line-pack: start;
-        align-content: start;
+     align-content: start;
 }
 
 a {
@@ -217,7 +216,12 @@ img {
     background-color: var(--basic-white);
     color: var(--basic-black);
     outline: none;
-    }
+ }
+ .header-form-search:focus svg{
+    fill: var(--basic-red);
+    opacity: 1;
+}
+
 
 .search svg{
     fill: #FFFFFF;
@@ -1043,8 +1047,8 @@ img {
 .card-product img{
     -ms-grid-row-align: center;
         align-self: center;
-    min-width: 145px;
-    max-width: 184px;
+    min-width: 150px;
+    max-width: 190px;
     max-height: 129px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -1642,15 +1646,16 @@ fieldset{
     position: absolute;
     top: 13px;
     left: 18px;
+    fill: var(--basic-greylight);
 }
 .button-sort:last-child svg{
     top:13px;
     left: 10px;
 }
-.button-sort:hover path{
+.button-sort:hover svg{
     fill: var(--basic-black);
 }
-.button-sort:focus path{
+.button-sort:focus svg{
     fill: var(--basic-red);
 }
 
@@ -1855,28 +1860,6 @@ fieldset{
 .filter-input-radio[type=radio]:disabled ~ label::before
 {
     opacity: 0.4;
-}
-/*
-.filter-input-radio[type=radio]:checked~label::before{
-    background: url(../img/decorative_icons/radio-on.svg) no-repeat;
-    padding-right: 8px;
-}
-.filter-input-radio[type=radio]:hover~label::before{
-    background: url(../img/decorative_icons/radio-hover.svg) no-repeat;
-   
-}
-.filter-input-radio[type=radio]:hover:checked~label::before{
-    background: url(../img/decorative_icons/radio-onradio-checed.svg) no-repeat;
-    width: 25px;
-    height: 25px;
-}
-.filter-input-radio[type=radio]:disabled~label::before{
-    background: url(../img/decorative_icons/radio-on-disabled\ .svg) no-repeat;
-    color: var(--color-checkbox-disabled);
-}
-.filter-input-radio[type=radio]:disabled:checked~label::before{
-    background: url(../img/decorative_icons/radio-off-disabled.svg.svg) no-repeat;
-    color: var(--color-checkbox-disabled);
 }
 
 /*button filter*/
@@ -2301,7 +2284,9 @@ fieldset{
     right: 12px;
     border: 0;
     background-color:transparent;
+    cursor: pointer;
 }
+
 /*madal-feedback*/
 .modal-feedback{
     display: none;
@@ -2436,3 +2421,52 @@ textarea{
 .background-modal-basket{
     background-color: var(--modal-basket-background);
 }
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+.modal-error {
+    animation: shake 0.6s;
+  }
+
+/* Animations */
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
