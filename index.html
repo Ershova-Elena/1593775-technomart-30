@@ -280,7 +280,7 @@
              <p class="text">Вы можете забрать товар сами, <br>
                заехав в наш офис:</p>
              <a class="map"><img src="img/content/map.jpg" width="300" height="158" alt="Местонахождение на карте"></a>
-             <a class="button" href="#">Заблудились? Напишите нам!</a>
+             <a class="button feedback-link" href="feedback.html">Заблудились? Напишите нам!</a>
            </section>
         </div>
 
@@ -290,15 +290,15 @@
             <div class="modal-wrapper">
               <p class="fedback-item">
                 <label class="feedback-name" for="name">Ваше имя:</label><br>
-                <input class="feedback-name" id="name" type="text" placeholder="Имя Фамилия">
+                <input class="feedback-name user-name" id="name" type="text" placeholder="Имя Фамилия">
               </p>
               <p class="feedback-item">
                 <label class="feedback-email" for="emael">Ваш e-mail:</label><br>
-                <input class="feedback-email" id="emael" type="email" placeholder="email@example.com">
+                <input class="feedback-email user-email" id="emael" type="email" placeholder="email@example.com">
               </p>
               <p class="feedback-item">
                 <label class="feedback-comment" for="comment">Текст письма:</label><br>
-                <textarea class="feedback-comment" placeholder="В свободной форме"  id="comment" rows="4"></textarea>
+                <textarea class="feedback-comment user-comment" placeholder="В свободной форме"  id="comment" rows="4"></textarea>
               </p>
             </div>
             <div class="modal-button-background">
@@ -385,5 +385,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/feedback-popap.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
