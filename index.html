@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
@@ -21,7 +20,8 @@
           <div class="header-panel">
             <a class="header-logo"><img src="img/logo/logo-header.svg" width="107" height="18" alt="Логотип Техномарт"></a>
             <form class="search" action="#" method="POST">
-              <input class="header-form-search" type="search" placeholder="Поиск:">
+              <label class="visually-hidden" for="search">Поиск</label>
+              <input class="header-form-search" type="search" id="search" placeholder="Поиск:">
               <svg width="17" height="17" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" /></svg>
             </form>
             <a class="header-bookmarks" href="blank.html">Закладки: 0</a>
@@ -67,7 +67,7 @@
           <h2 class="visually-hidden">Предложения сайта</h2>
           <ul  class="offers-list offers-list-one">
             <li class="offers-item materials-block new-element">
-              <h3>Материалы</h3>
+              <h3> Материалы</h3>
               <a class="button-offers-item" href="catalog.html">на любой вкус</a>
             </li>
             <li class="offers-item tools-block">
@@ -83,6 +83,23 @@
                 <li class="slider slider-grid">
                   <ul class="slider-list">
 
+                    <li class="slider-item slide"> 
+                      <div class="slider-text">
+                        <h3 class="heading-slider">Дрели</h3>
+                        <p class="paragraph-slider">Соседям на радость!</p>
+                      </div>
+                      <div class="slider-button">
+                        <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+                        <button class="button-back" type="button" aria-label="вперед"></button>
+                        <button class="button-forward" type="button" aria-label="назад"></button>
+                      </div> 
+                      <div class="slider-controls"> 
+                        <button class="current-button" type="button" aria-label="Первый слайд"></button>
+                        <button type="button" aria-label="Второй слайд"></button>
+                      </div>
+                      <img class="slider-image" src="img/content/slide2.jpg" width="620" height="256" alt="Мужчина с перфоратором">
+                    </li>
+
                     <li class="slider-item slide slide-current"> 
                       <div class="slider-text">
                         <h3 class="heading-slider">Перфораторы</h3>
@@ -96,26 +113,9 @@
                       
                       <div class="slider-controls"> 
                         <button type="button"  aria-label="Первый слайд"></button>
-                        <button type="button" aria-label="Второй слайд"></button>
-                      </div>
-                      <img class="slider-image" src="img/content/slider.jpg" width="620" height="256" alt="Мужчина с перфоратором">
-                    </li>
-
-                    <li class="slider-item slide"> 
-                      <div class="slider-text">
-                        <h3 class="heading-slider">Дрели</h3>
-                        <p class="paragraph-slider">Соседям на радость!</p>
-                      </div>
-                      <div class="slider-button">
-                        <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
-                        <button class="button-back" type="button" aria-label="вперед"></button>
-                        <button class="button-forward" type="button" aria-label="назад"></button>
-                      </div> 
-                      <div class="slider-controls"> 
-                        <button type="button" aria-label="Первый слайд"></button>
                         <button class="current-button" type="button" aria-label="Второй слайд"></button>
                       </div>
-                      <img class="slider-image" src="img/content/slide2.jpg" width="620" height="256" alt="Мужчина с перфоратором">
+                      <img class="slider-image" src="img/content/slider.jpg" width="620" height="256" alt="Мужчина с перфоратором">
                     </li>
                   </ul>
                  </li>
@@ -140,43 +140,43 @@
             <ul class="list-cards-product">
               <li class="card-product bosch-9000">
                 <div class="image-product">
-                  <img src="img/content/popular_goods/snippet-32961.jpg" width="184" height="164" alt="">
+                  <img src="img/content/popular_goods/snippet-32961.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
                 </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 9000</h3>
                 <p class="old-price"><s>32500 Р.</s></p>
                 <p class="new-price">25500 Р.</p>
-                <button class="buy-button" type="button" aria-label="Добавить в корзину Перфоратор BOSCH BFG 9000">Купить</button>
-                <button class="bookmark-button" type="button" aria-label="Добавить в закладки Перфоратор BOSCH BFG 9000">В закладки</button>
+                <a class="buy-button" href="buy-button.html" aria-label="Добавить в корзину Перфоратор BOSCH BFG 9000">Купить</a>
+                <a class="bookmark-button" href="bookmark.html" aria-label="Добавить в закладки Перфоратор BOSCH BFG 9000">В закладки</a>
               </li>
               <li class="card-product new-element">
                 <div class="image-product">
-                  <img src="img/content/popular_goods/snippet-18927.jpg" width="127" height="112" alt="">
+                  <img src="img/content/popular_goods/snippet-18927.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                 </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 3000</h3>
                 <p class="old-price"><s>22500 Р.</s></p>
                 <p class="new-price">15500 Р.</p>
-                <button class="buy-button" type="button" aria-label="Добавить в корзину Перфоратор BOSCH BFG 3000">Купить</button>
-                <button class="bookmark-button" type="button" aria-label="Добавить в закладки Перфоратор BOSCH BFG 3000">В закладки</button>
+                <a class="buy-button" href="buy-button.html" aria-label="Добавить в корзину Перфоратор BOSCH BFG 3000">Купить</a>
+                <a class="bookmark-button" href="bookmark.html" aria-label="Добавить в закладки Перфоратор BOSCH BFG 3000">В закладки</a>
               </li>
               <li class="card-product">
                 <div class="image-product">
-                  <img src="img/content/popular_goods/snippet-945.jpg" width="144" height="128" alt="">
+                  <img src="img/content/popular_goods/snippet-945.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                 </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 6000</h3>
                 <p class="old-price"><s>30500 Р.</s></p>
                 <p class="new-price">25500 Р.</p>
-                <button class="buy-button" type="button" aria-label="Добавить в корзину Перфоратор BOSCH BFG 6000">Купить</button>
-                <button class="bookmark-button" type="button" aria-label="Добавить в закладки Перфоратор BOSCH BFG 6000">В закладки</button>
+                <a class="buy-button" href="buy-button.html"  aria-label="Добавить в корзину Перфоратор BOSCH BFG 6000">Купить</a>
+                <a class="bookmark-button" href="bookmark.html" aria-label="Добавить в закладки Перфоратор BOSCH BFG 6000">В закладки</a>
               </li>
               <li class="card-product new-element">
                 <div class="image-product">
-                  <img src="img/content/popular_goods/snippet-18927.jpg"  width="127" height="112" alt="">
+                  <img src="img/content/popular_goods/snippet-18927.jpg"  width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                 </div>
                 <h3 class="product-name">Перфоратор BOSCH BFG 2000</h3>
                 <p class="old-price"><s>22500 Р.</s></p>
                 <p class="new-price">12500 Р.</p>
-                <button class="buy-button" type="button" aria-label="Добавить в корзину Перфоратор BOSCH BFG 2000">Купить</button>
-                <button class="bookmark-button" type="button" aria-label="Добавить в закладки Перфоратор BOSCH BFG 2000">В закладки</button>
+                <a class="buy-button" href="buy-button.html" aria-label="Добавить в корзину Перфоратор BOSCH BFG 2000">Купить</a>
+                <a class="bookmark-button" href="bookmark.html" aria-label="Добавить в закладки Перфоратор BOSCH BFG 2000">В закладки</a>
               </li>
             </ul>
           </div>
@@ -232,26 +232,32 @@
             <ul class="list-services slider-servise">
               <li class="item-service servise-delivery slide-service-current">
                <h3 class="caption-item-service">Доставка</h3>
-               <p class="text">Мы с удовольствием доставим ваш товар прямо <br>
-                  к вашему подъезду совершенно бесплатно!<br>
-                  Ведь мы неплохо заработаем, <br>
-                  поднимая его на ваш этаж!
+               <div class="text-block">
+                <p class="text">Мы с удовольствием доставим ваш товар прямо 
+                  к вашему подъезду совершенно бесплатно!
+                  Ведь&nbsp;мы&nbsp;неплохо заработаем,
+                  поднимая&nbsp;его&nbsp;на&nbsp;ваш&nbsp;этаж!
                 </p>
+              </div>
               </li>
               <li class="item-service servise-guarantee ">
                 <h3 class="caption-item-service">Гарантия</h3>
-                <p class="text">Если купленный у нас товар поломается или заискрит, <br>
-                  а также в случае пожара, спровоцированного его <br>
-                  возгоранием,  вы всегда можете быть уверены в нашей <br>
-                  гарантии. Мы обменяем сгоревший товар на новый. <br>
-                  Дом уж восстановите как-нибудь сами.
-                </p>
+                <div class="tetx-block">
+                  <p class="text">Если купленный у нас товар поломается или заискрит, 
+                    а также в случае пожара, спровоцированного его 
+                    возгоранием,  вы всегда можете быть уверены в нашей 
+                    гарантии. Мы обменяем сгоревший товар на новый. 
+                    Дом уж восстановите как-нибудь сами.
+                  </p>
+                </div>
               </li>
-              <li class="item-service servise-credit">
+              <li class="item-service servise-credit ">
                 <h3 class="caption-item-service">Кредит</h3>
-                <p class="text">Залезть в долговую яму стало проще!</p>
-                <p class="text">Кредитные консультанты придут вам на помощь.</p>
-                <a class="button">ОТПРАВИТЬ ЗАЯВКУ</a>
+                <div class="text-block">
+                <p class="text">Залезть в долговую яму стало проще!
+                  Кредитные консультанты придут вам на&nbsp;помощь.</p>
+                </div>
+                <a class="button credit-button">ОТПРАВИТЬ ЗАЯВКУ</a>
               </li>
             </ul>
           </div>
